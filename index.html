@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PedidoPro, sistema web de gestion de pedidos y practica de Git y GitHub.">
+  <title>PedidoPro | Gestion de pedidos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">P</div>
+        <div>
+          <strong>PedidoPro</strong>
+          <span>operaciones claras</span>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="Navegacion principal">
+        <p class="nav-label">Espacio de trabajo</p>
+        <button class="nav-item active" data-view="dashboard"><span class="nav-icon">⌂</span> Resumen</button>
+        <button class="nav-item" data-view="orders"><span class="nav-icon">▤</span> Pedidos <span class="nav-count">8</span></button>
+        <button class="nav-item" data-view="products"><span class="nav-icon">◈</span> Productos</button>
+        <button class="nav-item" data-view="customers"><span class="nav-icon">◎</span> Clientes</button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="branch-chip"><span class="status-dot"></span><span>main</span><span class="branch-sync">●</span></div>
+        <div class="profile">
+          <div class="avatar">GH</div>
+          <div><strong>Gabriel Hasqui</strong><span>Administrador</span></div>
+          <button class="icon-button" aria-label="Mas opciones">•••</button>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="menu-toggle icon-button" id="menu-toggle" aria-label="Abrir menu">☰</button>
+        <div class="breadcrumb"><span>PedidoPro</span><span>/</span><strong id="breadcrumb-current">Resumen</strong></div>
+        <div class="topbar-actions">
+          <span class="sync-status"><span class="status-dot"></span> Todo actualizado</span>
+          <button class="icon-button notification" id="notification-button" aria-label="Notificaciones">♢<span></span></button>
+          <button class="avatar avatar-small" aria-label="Abrir perfil">GH</button>
+        </div>
+      </header>
+
+      <div class="view-container">
+        <section class="view active" id="view-dashboard">
+          <div class="page-heading">
+            <div><p class="eyebrow">Martes, 19 de septiembre de 2026</p><h1>Buenos dias, Gabriel.</h1><p class="heading-copy">Este es el pulso de tu operacion para hoy.</p></div>
+            <button class="primary-button" id="new-order-button"><span>+</span> Nuevo pedido</button>
+          </div>
+
+          <div class="metric-grid">
+            <article class="metric-card metric-primary"><div class="metric-top"><span>Pedidos activos</span><span class="metric-icon">↗</span></div><strong id="active-orders">8</strong><div class="metric-bottom"><span class="trend-up">↑ 12.5%</span><span>vs. semana anterior</span></div></article>
+            <article class="metric-card"><div class="metric-top"><span>Ingresos del mes</span><span class="metric-icon">$</span></div><strong>$12,480</strong><div class="metric-bottom"><span class="trend-up">↑ 8.2%</span><span>vs. mes anterior</span></div></article>
+            <article class="metric-card"><div class="metric-top"><span>Clientes totales</span><span class="metric-icon">◎</span></div><strong id="customer-total">24</strong><div class="metric-bottom"><span class="trend-up">↑ 4 nuevos</span><span>este mes</span></div></article>
+            <article class="metric-card"><div class="metric-top"><span>Por entregar</span><span class="metric-icon">◷</span></div><strong id="delivery-total">3</strong><div class="metric-bottom"><span class="trend-warn">● 1 urgente</span><span>hoy</span></div></article>
+          </div>
+
+          <div class="content-grid">
+            <article class="panel orders-panel">
+              <div class="panel-heading"><div><h2>Pedidos recientes</h2><p>Seguimiento de la actividad mas reciente</p></div><button class="text-button" data-view-target="orders">Ver todos <span>→</span></button></div>
+              <div class="table-wrap"><table><thead><tr><th>Pedido</th><th>Cliente</th><th>Fecha</th><th>Total</th><th>Estado</th><th></th></tr></thead><tbody id="recent-orders-body"></tbody></table></div>
+            </article>
+            <article class="panel quick-panel"><div class="panel-heading"><div><h2>Acciones rapidas</h2><p>Atajos para tu jornada</p></div></div><div class="quick-actions"><button class="quick-action" id="quick-order"><span class="quick-icon yellow">+</span><span><strong>Crear un pedido</strong><small>Registra una nueva venta</small></span><span class="arrow">→</span></button><button class="quick-action" data-view-target="customers"><span class="quick-icon blue">◎</span><span><strong>Agregar cliente</strong><small>Amplia tu cartera</small></span><span class="arrow">→</span></button><button class="quick-action" data-view-target="products"><span class="quick-icon green">◈</span><span><strong>Ver inventario</strong><small>Revisa tus productos</small></span><span class="arrow">→</span></button></div></article>
+          </div>
+
+          <div class="content-grid lower-grid"><article class="panel status-panel"><div class="panel-heading"><div><h2>Estado de pedidos</h2><p>Distribucion actual</p></div><span class="period-label">Este mes⌄</span></div><div class="status-chart"><div class="donut"><div class="donut-center"><strong id="chart-total">24</strong><span>pedidos</span></div></div><div class="legend"><div><span class="legend-dot dot-yellow"></span><span>En preparacion</span><strong>8</strong></div><div><span class="legend-dot dot-blue"></span><span>En camino</span><strong>5</strong></div><div><span class="legend-dot dot-green"></span><span>Entregados</span><strong>11</strong></div></div></div></article><article class="panel activity-panel"><div class="panel-heading"><div><h2>Actividad reciente</h2><p>Ultimos movimientos del equipo</p></div><button class="icon-button">•••</button></div><div class="activity-list"><div class="activity-item"><div class="activity-avatar green">M</div><div><strong>Maria actualizo el pedido <span>#PP-1041</span></strong><small>Hace 12 minutos</small></div></div><div class="activity-item"><div class="activity-avatar blue">J</div><div><strong>Josue agrego un nuevo cliente</strong><small>Hace 45 minutos</small></div></div><div class="activity-item"><div class="activity-avatar yellow">D</div><div><strong>Diana marco <span>#PP-1038</span> como entregado</strong><small>Hace 1 hora</small></div></div></div></article></div>
+        </section>
+
+        <section class="view" id="view-orders"><div class="page-heading"><div><p class="eyebrow">Gestion operativa</p><h1>Pedidos</h1><p class="heading-copy">Consulta, actualiza y crea pedidos.</p></div><button class="primary-button" id="orders-new-button"><span>+</span> Nuevo pedido</button></div><div class="toolbar"><div class="search-box"><span>⌕</span><input id="order-search" type="search" placeholder="Buscar por pedido o cliente"></div><select id="order-filter"><option value="all">Todos los estados</option><option value="Preparacion">En preparacion</option><option value="Camino">En camino</option><option value="Entregado">Entregado</option></select></div><article class="panel"><div class="table-wrap"><table><thead><tr><th>Pedido</th><th>Cliente</th><th>Productos</th><th>Fecha</th><th>Total</th><th>Estado</th><th></th></tr></thead><tbody id="orders-body"></tbody></table></div></article></section>
+
+        <section class="view" id="view-products"><div class="page-heading"><div><p class="eyebrow">Catalogo</p><h1>Productos</h1><p class="heading-copy">Control de inventario y disponibilidad.</p></div><button class="primary-button" id="product-add-button"><span>+</span> Agregar producto</button></div><div class="product-grid" id="product-grid"></div></section>
+
+        <section class="view" id="view-customers"><div class="page-heading"><div><p class="eyebrow">Relacion comercial</p><h1>Clientes</h1><p class="heading-copy">Tu cartera, siempre al alcance.</p></div><button class="primary-button" id="customer-add-button"><span>+</span> Agregar cliente</button></div><div class="customer-grid" id="customer-grid"></div></section>
+
+      </div>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="order-modal" hidden><div class="modal"><div class="modal-header"><div><p class="eyebrow">Nuevo registro</p><h2>Crear pedido</h2></div><button class="icon-button close-modal" data-close-modal>×</button></div><form id="order-form"><label>Cliente<select id="form-customer" required></select></label><label>Producto<select id="form-product" required></select></label><label>Fecha de entrega<input id="form-date" type="date" required></label><label>Notas<textarea id="form-notes" rows="3" placeholder="Indicaciones para el equipo"></textarea></label><div class="form-actions"><button type="button" class="secondary-button" data-close-modal>Cancelar</button><button type="submit" class="primary-button">Guardar pedido</button></div></form></div></div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="js/data.js"></script><script src="js/app.js"></script>
+</body>
+</html>
