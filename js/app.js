@@ -30,7 +30,7 @@ function renderOrders() {
   if (all) {
     const query = ($('#order-search')?.value || '').toLowerCase();
     const filter = $('#order-filter')?.value || 'all';
-    const filtered = state.orders.filtr((order) => {
+    const filtered = state.orders.filter((order) => {
       const matchesText = `${order.id} ${order.customer}`.toLowerCase().includes(query);
       return matchesText && (filter === 'all' || order.status === filter);
     });
