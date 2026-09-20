@@ -12,12 +12,12 @@ Aplicacion web estatica creada con **HTML, CSS y JavaScript**. PedidoPro ofrece 
 
 ## Vista general
 
-| Area | Incluye |
-| --- | --- |
-| **Resumen** | Metricas, actividad reciente, distribucion de pedidos y acciones rapidas |
-| **Pedidos** | Busqueda, filtro por estado, listado detallado y actualizacion de estados |
-| **Productos** | Catalogo visual con precios, descripcion y stock disponible |
-| **Clientes** | Cartera de clientes, correo, pedidos realizados y gasto acumulado |
+| Area          | Incluye                                                                   |
+| ------------- | ------------------------------------------------------------------------- |
+| **Resumen**   | Metricas, actividad reciente, distribucion de pedidos y acciones rapidas  |
+| **Pedidos**   | Busqueda, filtro por estado, listado detallado y actualizacion de estados |
+| **Productos** | Catalogo visual con precios, descripcion y stock disponible               |
+| **Clientes**  | Cartera de clientes, correo, pedidos realizados y gasto acumulado         |
 
 ## Funcionalidades principales
 
