@@ -13,7 +13,8 @@ const pedidoProData = {
     { name: 'Pack desayuno', description: 'Cafe, jugo y croissant', price: '$120', stock: '24 disponibles', icon: '☕' },
     { name: 'Cafe premium', description: 'Grano seleccionado 500g', price: '$90', stock: '12 disponibles', icon: '◉' },
     { name: 'Kit oficina', description: 'Snacks para equipos', price: '$240', stock: '6 disponibles', icon: '▦' },
-    { name: 'Pack regalo', description: 'Presentacion especial', price: '$195', stock: '18 disponibles', icon: '✦' }
+    { name: 'Pack regalo', description: 'Presentacion especial', price: '$195', stock: '18 disponibles', icon: '✦' },
+    { name: 'Caja ejecutiva', description: 'Cafe y snacks ejecutivos', price: '$150', stock: '10 disponibles', icon: '[]' }
   ],
   customers: [
     { name: 'Maria Fernanda', email: 'maria.f@correo.com', orders: 8, spent: '$1,240' },
@@ -21,6 +22,7 @@ const pedidoProData = {
     { name: 'Sofia Andrade', email: 'sofia.a@correo.com', orders: 5, spent: '$760' },
     { name: 'Diego Ramirez', email: 'diego.r@correo.com', orders: 4, spent: '$540' },
     { name: 'Laura Torres', email: 'laura.t@correo.com', orders: 3, spent: '$420' },
-    { name: 'Andres Leon', email: 'andres.l@correo.com', orders: 2, spent: '$320' }
+    { name: 'Andres Leon', email: 'andres.l@correo.com', orders: 2, spent: '$320' },
+    { name: 'Ana Lopez', email: 'ana.lopez@correo.com', orders: 1, spent: '$120' }
   ]
 };
