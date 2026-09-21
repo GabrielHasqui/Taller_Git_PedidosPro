@@ -13,7 +13,8 @@ const pedidoProData = {
     { name: 'Pack desayuno', description: 'Cafe, jugo y croissant', price: '$999', stock: '24 disponibles', icon: '☕' },
     { name: 'Cafe premium', description: 'Grano seleccionado 500g', price: '$90', stock: '12 disponibles', icon: '◉' },
     { name: 'Kit oficina', description: 'Snacks para equipos', price: '$240', stock: '6 disponibles', icon: '▦' },
-    { name: 'Pack regalo', description: 'Presentacion especial', price: '$195', stock: '18 disponibles', icon: '✦' }
+    { name: 'Pack regalo', description: 'Presentacion especial', price: '$195', stock: '18 disponibles', icon: '✦' },
+    { name: 'Caja ejecutiva', description: 'Cafe y snacks ejecutivos', price: '$150', stock: '10 disponibles', icon: '[]' }
   ],
   customers: [
     { name: 'Maria Fernanda', email: 'maria.f@correo.com', orders: 8, spent: '$1,240' },
