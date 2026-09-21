@@ -10,7 +10,7 @@ const pedidoProData = {
     { id: '#PP-1034', customer: 'Mateo Silva', products: 'Cafe molido x2', date: '16 Sep, 10:00', total: '$90', status: 'Preparacion' }
   ],
   products: [
-    { name: 'Pack desayuno', description: 'Cafe, jugo y croissant', price: '$120', stock: '24 disponibles', icon: '☕' },
+    { name: 'Pack desayuno', description: 'Cafe, jugo y croissant', price: '$999', stock: '24 disponibles', icon: '☕' },
     { name: 'Cafe premium', description: 'Grano seleccionado 500g', price: '$90', stock: '12 disponibles', icon: '◉' },
     { name: 'Kit oficina', description: 'Snacks para equipos', price: '$240', stock: '6 disponibles', icon: '▦' },
     { name: 'Pack regalo', description: 'Presentacion especial', price: '$195', stock: '18 disponibles', icon: '✦' }
