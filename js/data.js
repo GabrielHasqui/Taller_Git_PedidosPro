@@ -21,6 +21,7 @@ const pedidoProData = {
     { name: 'Sofia Andrade', email: 'sofia.a@correo.com', orders: 5, spent: '$760' },
     { name: 'Diego Ramirez', email: 'diego.r@correo.com', orders: 4, spent: '$540' },
     { name: 'Laura Torres', email: 'laura.t@correo.com', orders: 3, spent: '$420' },
-    { name: 'Andres Leon', email: 'andres.l@correo.com', orders: 2, spent: '$320' }
+    { name: 'Andres Leon', email: 'andres.l@correo.com', orders: 2, spent: '$320' },
+    { name: 'Ana Lopez', email: 'ana.lopez@correo.com', orders: 1, spent: '$120' }
   ]
 };
